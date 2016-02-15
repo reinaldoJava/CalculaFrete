@@ -78,13 +78,17 @@ public class CalculaFreteService {
 						break;
 					}else {
 						tempMapasOrigem.add(mapa);
+						mapa.getDestino();
 					}
 				}
 				if(dadosFrete.getDestino().equalsIgnoreCase(mapa.getDestino())){
 					tempMapasDestino.add(mapa);
 				}
-						
 			}
+			int index1 = tempMapasOrigem.size();
+			int index2 = tempMapasDestino.size();
+			
+			
 			
 			
 			
