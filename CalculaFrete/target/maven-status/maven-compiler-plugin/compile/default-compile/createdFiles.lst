@@ -1,0 +1,8 @@
+br/com/controller/FreteController.class
+br/com/model/DadosFrete.class
+br/com/model/DadosRetorno.class
+br/com/controller/InterfaceFreteController.class
+br/com/model/Rota.class
+br/com/dao/ClienteDAO.class
+br/com/dao/ClienteDAOImpl.class
+br/com/service/CalculaFreteService.class
