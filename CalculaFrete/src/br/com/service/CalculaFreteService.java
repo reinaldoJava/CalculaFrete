@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 import br.com.model.DadosFrete;
 import br.com.model.DadosRetorno;
-import br.com.model.Mapa;
+import br.com.model.MapaBO;
 
 @Path("/calcular")
 public class CalculaFreteService {
@@ -32,15 +32,15 @@ public class CalculaFreteService {
 			return Response.status(200).entity(result).build();
 		}
 		
-		public static List<Mapa> mapas = new ArrayList<Mapa>();
+		public static List<MapaBO> mapas = new ArrayList<MapaBO>();
 		static {
 			
-			Mapa mapa1 = new Mapa("São Paulo 1","A","B",10.0);
-			Mapa mapa2 = new Mapa("São Paulo 2","B","D",15.0);
-			Mapa mapa3 = new Mapa("São Paulo 3","A","C",20.0);
-			Mapa mapa4 = new Mapa("São Paulo 4","C","D",30.0);
-			Mapa mapa5 = new Mapa("São Paulo 5","B","E",50.0);
-			Mapa mapa6 = new Mapa("São Paulo 6","D","E",30.0);
+			MapaBO mapa1 = new MapaBO("São Paulo 1","A","B",10.0);
+			MapaBO mapa2 = new MapaBO("São Paulo 2","B","D",15.0);
+			MapaBO mapa3 = new MapaBO("São Paulo 3","A","C",20.0);
+			MapaBO mapa4 = new MapaBO("São Paulo 4","C","D",30.0);
+			MapaBO mapa5 = new MapaBO("São Paulo 5","B","E",50.0);
+			MapaBO mapa6 = new MapaBO("São Paulo 6","D","E",30.0);
 			mapas.add(mapa1);
 			mapas.add(mapa2);
 			mapas.add(mapa3);
@@ -61,9 +61,9 @@ public class CalculaFreteService {
 		}
 		public static DadosRetorno calcularMenorValorFrete(DadosFrete dadosFrete){
 			DadosRetorno retorno = new DadosRetorno();
-			List<Mapa>tempMapas = new ArrayList<Mapa>();
-			List<Mapa>tempMapasOrigem = new ArrayList<Mapa>();
-			List<Mapa>tempMapasDestino = new ArrayList<Mapa>();
+			List<MapaBO>tempMapas = new ArrayList<MapaBO>();
+			List<MapaBO>tempMapasOrigem = new ArrayList<MapaBO>();
+			List<MapaBO>tempMapasDestino = new ArrayList<MapaBO>();
 			List<String> rotas = new ArrayList<String>();
 			List<Double> valoresFrete = new ArrayList<Double>();
 			rotas.add(dadosFrete.getOrigem());
@@ -71,7 +71,7 @@ public class CalculaFreteService {
 			Double valor = 0.0;
 			
 			
-			for(Mapa mapa: mapas){
+			for(MapaBO mapa: mapas){
 				if(dadosFrete.getOrigem().equalsIgnoreCase(mapa.getOrigem())){
 					if(dadosFrete.getDestino().equalsIgnoreCase(mapa.getDestino())){
 						rotas.add(mapa.getDestino());
@@ -111,7 +111,18 @@ public class CalculaFreteService {
 			
 			
 			
-			for(Mapa mapa: mapas){
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			for(MapaBO mapa: mapas){
 				if(dadosFrete.getOrigem().equalsIgnoreCase(mapa.getOrigem())){
 					if(dadosFrete.getDestino().equalsIgnoreCase(mapa.getDestino())){
 						rotas.add(mapa.getDestino());
@@ -123,10 +134,10 @@ public class CalculaFreteService {
 			}
 			if(rotas.size() <= 1){
 				boolean temp = false;
-				for(Mapa mapaTemp : tempMapas){
+				for(MapaBO mapaTemp : tempMapas){
 					if(temp)
 						break;
-					for(Mapa mapa : mapas){
+					for(MapaBO mapa : mapas){
 						if(mapaTemp.getDestino().equalsIgnoreCase(mapa.getOrigem())){
 							if(dadosFrete.getDestino().equalsIgnoreCase(mapa.getDestino())){
 								rotas.add(mapa.getOrigem());

@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import br.com.model.Mapa;
+import br.com.model.MapaBO;
 
 @Repository
 public class ClienteDAOImpl implements ClienteDAO{
@@ -16,26 +16,26 @@ public class ClienteDAOImpl implements ClienteDAO{
     private EntityManager entityManager;
 	
 	@Override
-	public void adicionar(Mapa rota) {
+	public void adicionar(MapaBO rota) {
 		// TODO Auto-generated method stub
 		entityManager.persist(rota);
 	}
 
 	@Override
-	public void remover(Mapa rota) {
+	public void remover(MapaBO rota) {
 		// TODO Auto-generated method stub
 		entityManager.remove(rota);
 	}
 
 	@Override
-	public void atualizar(Mapa rota) {
+	public void atualizar(MapaBO rota) {
 		// TODO Auto-generated method stub
 		entityManager.merge(rota);
 	}
 
 	@Override
-	public List<Mapa> list() {
-		return entityManager.createQuery("FROM " + Mapa.class.getName()).getResultList();
+	public List<MapaBO> list() {
+		return entityManager.createQuery("FROM " + MapaBO.class.getName()).getResultList();
 	}
 
 	
