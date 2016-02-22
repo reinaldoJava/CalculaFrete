@@ -3,7 +3,7 @@ package br.com.bo;
 public class RotaBO {
 
 	private MapaBO mapaBO;
-    private Double valor;
+    private Double distanciaKM;
     
     public RotaBO(MapaBO mapaBO, Double valor){ 
     	this.setMapaBO(mapaBO); 
@@ -19,10 +19,10 @@ public class RotaBO {
 	}
 
 	public Double getValor() {
-		return valor;
+		return distanciaKM;
 	}
 
 	public void setValor(Double valor) {
-		this.valor = valor;
+		this.distanciaKM = valor;
 	}
 }

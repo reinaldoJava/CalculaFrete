@@ -1,8 +1,9 @@
+/home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/bo/RotaBO.java
 /home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/model/DadosRetorno.java
 /home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/dao/ClienteDAOImpl.java
 /home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/model/DadosFrete.java
+/home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/model/Mapa.java
 /home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/dao/ClienteDAO.java
-/home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/controller/InterfaceFreteController.java
+/home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/bo/MapaBO.java
 /home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/service/CalculaFreteService.java
 /home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/controller/FreteController.java
-/home/desenv/GIT/Entrevistas/EntregaMercadorias/CalculaFrete/src/br/com/model/Rota.java

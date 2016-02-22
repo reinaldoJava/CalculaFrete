@@ -3,12 +3,18 @@ import java.math.BigDecimal;
 
 public class DadosFrete {
 	
-	private Long id;
+	private String nome;
 	private String origem;
 	private String destino;
 	private Double automonia;
 	private BigDecimal valorCombustivel;
 	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 	public String getOrigem() {
 		return origem;
 	}
@@ -32,11 +38,5 @@ public class DadosFrete {
 	}
 	public void setValorCombustivel(BigDecimal valorCombustivel) {
 		this.valorCombustivel = valorCombustivel;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	}	
 }
